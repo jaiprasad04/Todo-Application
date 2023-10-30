@@ -1,0 +1,42 @@
+GET http://localhost:3005/todos/?status=TO%20DO
+
+###
+
+GET http://localhost:3005/todos/?priority=HIGH
+
+###
+
+GET http://localhost:3005/todos/?priority=MEDIUM&status=DONE
+
+###
+
+GET http://localhost:3005/todos/?search_q=Learn%20CSS
+
+###
+
+GET http://localhost:3005/todos/2/
+
+###
+
+POST http://localhost:3005/todos/
+Content-Type: application/json
+
+{
+    "id": 5,
+    "todo": "Learn JavaScript",
+    "priority": "HIGH",
+    "status": "DONE"
+}
+
+###
+
+PUT http://localhost:3005/todos/2/
+Content-Type: application/json
+
+{ 
+  "todo": "Some task" 
+}
+
+###
+
+DELETE http://localhost:3005/todos/5/
